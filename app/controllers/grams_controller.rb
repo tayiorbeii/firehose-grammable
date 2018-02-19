@@ -57,7 +57,7 @@ class GramsController < ApplicationController
     params.require(:gram).permit(:message)
   end
 
-  def render_not_found
-    render plain: 'Not Found :(', status: :not_found
+  def render_not_found(status = :not_found)
+    render plain: 'Not Found :(', status: status
   end
 end
